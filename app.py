@@ -48,13 +48,18 @@ Important Guidelines:
 
 Remember: Your goal is to provide the most accurate, helpful, and professionally sound medical analysis possible while emphasizing the importance of professional medical care."""
 
-# Page configuration
+# --- PAGE CONFIGURATION ---
 st.set_page_config(
-    page_title="Professional CDSS & Health Vault",
-    page_icon="🏥",
+    page_title="DocPro-Ai",
+    page_icon="logo.png",
     layout="wide",
     initial_sidebar_state="expanded"
 )
+
+# --- SIDEBAR LOGO ---
+st.sidebar.image("logo.png", use_container_width=True)
+st.sidebar.divider()
+
 
 # Initialize database
 db = Database()
@@ -62,7 +67,7 @@ db = Database()
 # Translations
 TRANSLATIONS = {
     'en': {
-        'title': 'Professional CDSS & Health Vault',
+        'title': 'DocPro-Ai',
         'login': 'Login',
         'signup': 'Sign Up',
         'username': 'Username',
