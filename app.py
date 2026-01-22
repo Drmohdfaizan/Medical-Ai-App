@@ -10,7 +10,7 @@ from database import Database
 import hashlib
 
 # Configure Gemini API with your key
-GEMINI_API_KEY = "AIzaSyCxW2zeJaeQm_ZXery_Swjwq3oqbhg0YhI"
+GEMINI_API_KEY = st.secrets["GOOGLE_API_KEY"]
 genai.configure(api_key=GEMINI_API_KEY)
 
 # Professional System Prompt for Medical Analysis
