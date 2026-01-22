@@ -13,6 +13,17 @@ import hashlib
 GEMINI_API_KEY = st.secrets["GOOGLE_API_KEY"]
 genai.configure(api_key=GEMINI_API_KEY)
 
+# Hide Streamlit elements (GitHub icon, Toolbar, Footer)
+hide_st_style = """
+            <style>
+            #MainMenu {visibility: hidden;}
+            header {visibility: hidden;}
+            footer {visibility: hidden;}
+            .viewerBadge_container__1QS13 {display: none !important;}
+            </style>
+            """
+st.markdown(hide_st_style, unsafe_allow_html=True)
+
 # Professional System Prompt for Medical Analysis
 MEDICAL_SYSTEM_PROMPT = """You are a Medical Diagnostic Expert AI with advanced training in clinical diagnosis, radiology, pathology, and pharmacology.
 
